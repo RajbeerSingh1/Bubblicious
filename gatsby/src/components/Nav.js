@@ -9,6 +9,9 @@ export default function Nav() {
           <Link to="/">Menu</Link>
         </li>
         <li>
+          <h2>Bubblicious</h2>
+        </li>
+        <li>
           <Link to="/order">Order Ahead!</Link>
         </li>
       </ul>
