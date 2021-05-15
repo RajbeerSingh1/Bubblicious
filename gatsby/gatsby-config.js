@@ -4,6 +4,7 @@ dotenv.config({ path: '.env' });
 
 export default {
   plugins: [
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-sanity',
       options: {
