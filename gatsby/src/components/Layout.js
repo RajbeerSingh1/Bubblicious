@@ -25,6 +25,21 @@ const BorderStyles = styled.div`
 const LayoutStyles = styled.div`
   background: white;
   padding: 2rem;
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+  h3 {
+    text-align: center;
+    padding: 1rem;
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export default function Layout({ children }) {
@@ -35,6 +50,8 @@ export default function Layout({ children }) {
       <BorderStyles>
         <LayoutStyles>
           <Nav />
+          <h1>THE BEST BUBBLE TEA DOWNTOWN!</h1>
+          <h3>OPEN 11 AM TO 11 PM. EVERY SINGLE DAY.</h3>
           {children}
           <Footer />
         </LayoutStyles>

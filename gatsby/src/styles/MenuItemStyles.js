@@ -24,7 +24,7 @@ const MenuItemStyles = styled.div`
   .remove {
     background: none;
     color: red;
-    font-size: 3rem;
+    font-size: 5rem;
     position: absolute;
     top: 0;
     right: 0;

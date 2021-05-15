@@ -31,6 +31,25 @@ const NavStyles = styled.nav`
       color: red;
     }
   }
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 4rem;
+    }
+    a {
+      font-size: 2.5rem;
+      padding: 1rem;
+      background-color: var(--grey);
+    }
+    ul {
+      margin-bottom: 2rem;
+      grid-template-rows: auto auto;
+      grid-template-columns: auto auto;
+    }
+    .logoItem {
+      order: -1;
+      grid-column: 1/-1;
+    }
+  }
 `;
 
 export default function Nav() {
@@ -40,7 +59,7 @@ export default function Nav() {
         <li>
           <Link to="/">Menu</Link>
         </li>
-        <li>
+        <li className="logoItem">
           <h2 className="tilt">Bubblicious</h2>
         </li>
         <li>

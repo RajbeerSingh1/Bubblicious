@@ -5,8 +5,12 @@ import styled from 'styled-components';
 
 const DrinksGrid = styled.div`
   display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 4rem;
+  margin: 2rem;
+  @media (max-width: 600px) {
+    grid-template-rows: 30rem auto;
+  }
 `;
 
 export default function SingleDrinkPage({ data: { drinks } }) {

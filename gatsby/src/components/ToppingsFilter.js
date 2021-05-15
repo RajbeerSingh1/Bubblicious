@@ -6,6 +6,7 @@ const ToppingsStyles = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
   a {
     display: grid;
@@ -21,6 +22,13 @@ const ToppingsStyles = styled.div`
     }
     &[aria-current='page'] {
       background: var(--lightGreen);
+    }
+  }
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    a {
+      font-size: 1.5rem;
     }
   }
 `;
@@ -47,8 +55,7 @@ function countToppings(drinks) {
   return sortedToppings;
 }
 
-export default function ToppingsFilter({ activeTopping }) {
-  console.log(activeTopping);
+export default function ToppingsFilter() {
   // Get a list of all the drinks with their toppings.
   const { drinks } = useStaticQuery(graphql`
     query {
@@ -75,11 +82,7 @@ export default function ToppingsFilter({ activeTopping }) {
         <span className="count">{toppings.length}</span>
       </Link>
       {toppings.map((eachTopping) => (
-        <Link
-          key={eachTopping.id}
-          to={`/${eachTopping.slug}`}
-          className={eachTopping.slug === activeTopping ? 'active' : ''}
-        >
+        <Link key={eachTopping.id} to={`/${eachTopping.slug}`}>
           <span className="name">{eachTopping.name}</span>
           <span className="count">{eachTopping.count}</span>
         </Link>

@@ -7,13 +7,19 @@ const DrinkGridStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 4rem;
-  grid-auto-rows: auto auto 500px;
+  grid-auto-rows: auto auto 400px;
+  @media (max-width: 600px) {
+    grid-auto-rows: auto auto 300px;
+  }
 `;
 
 const DrinkStyles = styled.div`
   display: grid;
   @supports not (grid-template-rows: subgrid) {
-    --rows: auto auto 1fr;
+    --rows: auto auto 400px;
+    @media (max-width: 600px) {
+      --rows: auto auto 300px;
+    }
   }
   grid-template-rows: var(--rows, subgrid);
   grid-row: span 3;

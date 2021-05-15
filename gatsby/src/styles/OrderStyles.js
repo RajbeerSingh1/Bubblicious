@@ -4,6 +4,7 @@ const OrderStyles = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  margin-top: 2rem;
 
   fieldset {
     grid-column: span 2;
@@ -16,14 +17,24 @@ const OrderStyles = styled.form`
     &.menu,
     &.order {
       grid-column: span 1;
-      height: 600px;
+      max-height: 600px;
     }
-    @media (max-width: 900px) {
-      fieldset.menu,
-      fieldset.order {
+    @media (max-width: 600px) {
+      &.menu,
+      &.order {
         grid-column: span 2;
       }
+      &.total {
+        h2 {
+          font-size: 2rem;
+        }
+      }
     }
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin: 1rem 0 1rem 0;
   }
 `;
 

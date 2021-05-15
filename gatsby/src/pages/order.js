@@ -90,7 +90,7 @@ export default function OrderPage({ data }) {
             />
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset className="total">
           <h2>
             Your Total is: {formatMoney(calculateOrderTotal(order, drinks))}
           </h2>

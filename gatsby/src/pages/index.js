@@ -7,8 +7,6 @@ export default function HomePage({ data, pageContext }) {
   const drinks = data.allSanityDrinks.nodes;
   return (
     <>
-      <h1>THE BEST BUBBLE TEA DOWNTOWN!</h1>
-      <h3>OPEN 11 AM TO 11 PM. EVERY SINGLE DAY.</h3>
       <ToppingsFilter activeTopping={pageContext.slug} />
       <DrinksList drinks={drinks} />
     </>
