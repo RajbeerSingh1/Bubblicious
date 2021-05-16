@@ -33,7 +33,7 @@ const OrderStyles = styled.form`
   }
   input {
     display: block;
-    width: 100%;
+    width: 90%;
     margin: 1rem 0 1rem 0;
   }
 `;

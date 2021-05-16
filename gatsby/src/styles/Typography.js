@@ -23,6 +23,9 @@ const Typography = createGlobalStyle`
     text-decoration-color: var(--green);
     /* Chrome renders this weird with this font, so we turn it off */
     text-decoration-skip-ink: none;
+    @media(max-width: 600px){
+      text-decoration: none;
+    }
   }
   mark, .mark {
     background: var(--lightGreen);
